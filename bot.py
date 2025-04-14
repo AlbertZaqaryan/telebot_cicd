@@ -6,4 +6,10 @@ bot = TeleBot(token='7626718856:AAEPrRajY9Ub-Y_Tyl9-kqRwDm_q0ayHILY')
 def start(message):
     bot.send_message(message.chat.id, "Hello")
 
+@bot.message_handler()
+def typing(message):
+    if message.text == 'Barev':
+        bot.send_message(message.chat.id, 'Barev barev harazat jan')
+
+
 bot.polling()
